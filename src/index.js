@@ -1,4 +1,6 @@
 import Sum from "./2-sum";
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
-ReactDOM.render(< Sum/>, document.getElementById('root'));
+
+const rootElement = document.getElementById('root');
+createRoot(rootElement).render(<Sum />);

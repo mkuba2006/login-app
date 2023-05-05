@@ -1,19 +1,24 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-import Register from "./1-register";
 import Login from "./1-log";
 
-function Sum(props){
-    const [logged, setLogged] = useState(false);
+import Register from "./1-register";
 
-    function handl(e){
+
+
+
+
+
+
+function Sum(props){
+
+    const [logged, setLogged] = useState(false);
+    function handl(password){
       setLogged(!logged);
     }
-
-
+    
     return(
         <div>
-          {logged ? <Login /> : <Register onSub={handl} />}
+          {logged ? <Login /> : <Register onSub={handl}/>}
         </div>
       )
 }
