@@ -4,6 +4,7 @@ function Register(props){
 
   function change() {
     const name = document.getElementById('nick').value;
+    window.name = name;
     const password = document.getElementById('password').value;
     const Cpassword = document.getElementById('confirm_password').value;
     window.Cpassword = Cpassword;
