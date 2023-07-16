@@ -1,39 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
+import classes from './style.module.css';
 
 function Register(props){
 
-  function change() {
-    const name = document.getElementById('nick').value;
-    window.name = name;
-    const password = document.getElementById('password').value;
-    const Cpassword = document.getElementById('confirm_password').value;
-    window.Cpassword = Cpassword;
-    const submit = document.getElementById('submit');
-    const warn = document.getElementById('warn');
-    if (name !== '' && password !== '' && Cpassword !== '') {
-      if(password=== Cpassword){
-        submit.style.display = 'block';
-        warn.style.display='none';
-      }else{
-        warn.style.display='block';
-      }
-    } 
-    else {
-      submit.style.display = 'none';
-      warn.style.display='none';
-    }
+  const [nick, setnick]= useState('');
+  const [pass, setpass]= useState('');
+  const [pass2, setpass2]= useState('');
+  const [warn, setwarn]= useState(false);
+
+  const nickchange = (e)=>{
+    setnick(e.target.value);
+  }
+  const passchange = (e)=>{
+    setpass(e.target.value);
+  }
+  const passchange2 = (e)=>{
+    setpass2(e.target.value);
+  }
+  useEffect(() => {
+    setwarn(nick !== '' && pass === pass2 && pass !== '');
+    console.log(warn);
+  }, [pass2]);
+  
+  const submit =(e)=>{
+    e.preventDefault();
+    props.onSub(nick,pass,pass2);
   }
 
   return(
-    <div id='cont'>
-      <h1>Welcome</h1>
+    <div className={classes.cont}>
+      <h1 className={classes.h1}>Welcome</h1>
       <h2>Create your account</h2>
-      <div id='reg'>
-        <input type='text' placeholder='Nickname' id='nick' className="input" name="text" onChange={change}/>
-        <input type='password' placeholder='password' id='password' className="input" onChange={change}/>
-        <input type='password' placeholder='confirm password' id='confirm_password' className="input" onChange={change}  />
+      <div className={classes.reg}>
+        <input type='text' placeholder='Nickname' id='nick' className={classes.input} onChange={nickchange}/>
+        <input type='password' placeholder='password' id='password' className={classes.input} onChange={passchange}/>
+        <input type='password' placeholder='confirm password' id='confirm_password' className={classes.input} onBlur={passchange2}  />
         <span id='warn' style={{display: 'none'}}>The passwords are not identical!</span>
-        <input className="input2" type='submit' id='submit' onClick={props.onSub}  />
+        <input className={`${warn === true ? classes.warn2 : classes.input2}`} type="submit" id="submit" onClick={submit}/>
       </div>
     </div>
   )
