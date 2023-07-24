@@ -5,7 +5,7 @@ import Register from "./1-register";
 
 
 
-function Sum(props){
+function Sum(){
   const [nick1, setnick1] = useState('');
   const [pass1, setpass1] = useState(false);
   const [registred, setLogged] = useState(false);
@@ -18,20 +18,20 @@ function Sum(props){
   function handl(nick, p, p2) {
     setnick1(nick);
     setpass1(p2);
-    setLogged(!registred);
+    setLogged(true);
   }
 
   useEffect(()=>{
-    const StoredUser = localStorage.getItem('logged');
+    const StoredUser = localStorage.getItem('loggedd');
     if(StoredUser === '1'){
       setlog(true);
     }
-  }, [])
+  }, [LogOut])
 
   
   function handl2(nick, password) {
 
-    localStorage.setItem('logged','1');
+    localStorage.setItem('loggedd','1');
 
     const a = document.getElementById("sss");
     setnick2(nick);
@@ -43,13 +43,19 @@ function Sum(props){
       a.style.backgroundColor='red';
     }
   }
-  
+
+
+  function LogOut(){
+    setlog(false);
+    setLogged(false);
+    localStorage.removeItem('loggedd');
+  }
   
   return(
     <React.Fragment>
       {registred && !logged ? <Login onClick={handl2}/> : ''}
       {!registred && !logged ? <Register onSub={handl} /> : ''}
-      {logged && <Home/>}
+      {logged && <Home onCick={LogOut}/>}
     </React.Fragment>
   )
 }

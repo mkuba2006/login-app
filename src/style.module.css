@@ -21,7 +21,7 @@ html, body {
 body{
   background: linear-gradient(135deg, #0072ff, #00c6ff);
   color: rgb(37, 38, 39);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -51,6 +51,9 @@ body{
   background-color: #9c96ec88;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
+h2{
+  margin: 0 0 16px 0;
+}
 .reg{
     display: flex;
     flex-direction: column;
@@ -64,15 +67,16 @@ body{
 }
 
 .h1{
-  font-family: 'Work Sans', sans-serif;
-  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px;
+  font-size: 35px;
 }
 
 .input {
     background-color: #ffffffd0;
-    font-weight: 900;
-    font-family: 'Montserrat';
-    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
     border: none;
     padding: 8px;
     box-shadow: 0 0 0 .15vw rgba(148, 111, 216, 0.186);
@@ -92,10 +96,12 @@ body{
     box-shadow: 0 0 0 .15vw skyblue;
   }
 .input2{
+  
+  margin-top: 10px;
   background-color: #0066ff;
   color: #fff;
   border: 0;
-  display: none;
+  display: block;
   border-radius: 24px;
   min-width: 200px;
   padding: 10px 16px;
@@ -105,6 +111,8 @@ body{
   transition: background-color .3s ease;
 }
 .warn2{
+  
+  margin-top: 10px;
   background-color: #0066ff;
   color: #fff;
   border: 0;
@@ -118,6 +126,14 @@ body{
   transition: background-color .3s ease;
   display: block;
 }
+.warn2:hover {
+  background-color: green;
+}
+
+.input2:hover {
+  background-color: red;
+}
+
 .input23{
   background-color: #0066ff;
   color: #fff;
@@ -131,9 +147,7 @@ body{
   cursor: pointer;
   transition: background-color .3s ease;
 }
-.input2:hover {
-  background-color: #0250c4;
-}
+
 
   .circle {
     z-index: 0;
@@ -196,4 +210,60 @@ body{
       0% { transform: translateY(50vh); }
       100% { transform: translateY(-220vh); } 
     }
+  }
+
+
+
+
+
+
+  .butt {
+    margin: 0 auto;
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.5s ease-in-out;
+    font-size: 19px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    background: #040f16;
+    color: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .butt:hover {
+    box-shadow: 0 0 20px 0px #2e2e2e3a;
+  }
+  
+  .butt .icon {
+    position: absolute;
+    height: 40px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+  }
+  
+  .butt .text {
+    transform: translateX(65px);
+  }
+  
+  .butt:hover .icon {
+    width: 170px;
+  }
+  
+  .butt:hover .text {
+    transition: all 0.5s;
+    opacity: 0;
+  }
+  
+  .butt:focus {
+    outline: none;
+  }
+  
+  .butt:active .icon {
+    transform: scale(0.85);
   }

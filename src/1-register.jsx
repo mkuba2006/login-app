@@ -26,6 +26,9 @@ function Register(props){
     e.preventDefault();
     props.onSub(nick,pass,pass2);
   }
+  const cant =(e)=>{
+    e.preventDefault();
+  }
 
   return(
     <div className={classes.cont}>
@@ -35,8 +38,7 @@ function Register(props){
         <input type='text' placeholder='Nickname' id='nick' className={classes.input} onChange={nickchange}/>
         <input type='password' placeholder='password' id='password' className={classes.input} onChange={passchange}/>
         <input type='password' placeholder='confirm password' id='confirm_password' className={classes.input} onBlur={passchange2}  />
-        <span id='warn' style={{display: 'none'}}>The passwords are not identical!</span>
-        <input className={`${warn === true ? classes.warn2 : classes.input2}`} type="submit" id="submit" onClick={submit}/>
+        <input className={`${warn === true ? classes.warn2 : classes.input2}`} type="submit" id="submit" onClick={warn === true ? submit : cant}/>
       </div>
     </div>
   )
