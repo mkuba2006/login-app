@@ -1,9 +1,7 @@
-import React, { useState, useEffect, useReducer } from 'react';
+import React, { useState, useEffect } from 'react';
 import Login from "./1-log";
 import Home from './1-logged';
 import Register from "./1-register";
-
-
 
 function Sum(){
   const [nick1, setnick1] = useState('');

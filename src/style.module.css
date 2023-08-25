@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Work+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-
+img{
+  width: 50%;
+  min-width: 120px;
+  margin: 0 auto;
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -267,3 +271,26 @@ h2{
   .butt:active .icon {
     transform: scale(0.85);
   }
+
+
+  .passed{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -54%);
+    width: 100vw;
+    height: 150vh;
+    background-color: #000000a8;
+  }
+  .passed2 {
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 80px 50px;
+    border-radius: 7px;
+    color: black;
+  }
+  
