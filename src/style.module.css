@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Work+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-img{
-  width: 50%;
-  min-width: 120px;
-  margin: 0 auto;
-}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -23,7 +19,8 @@ html, body {
   border-radius: 10px;
 }
 body{
-  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  background: url('./images/haikei2.svg');
+  background-position: center;
   color: rgb(37, 38, 39);
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -45,29 +42,76 @@ body{
 }
 .cont{
   color: aliceblue;
-  padding: 32px 64px;
   border: none;
   border-radius: 16px;
   width: fit-content;
   display: flex;
   text-align: center;
-  flex-direction: column;
-  background-color: #9c96ec88;
+  flex-direction: row;
+  background-color: #E4F1FF;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  height: 600px;
+  border-radius: 32px;
+  width: 50vw;
+  min-width: 1000px;
+  overflow: hidden;
+}
+
+main{
+  padding: 32px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: white;
+  border-radius: 85% 32px 32px 85%;
+  width: 40%;
+  z-index: 10;
+  color: black;
+}
+.img{
+  padding: 32px 64px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E4F1FF;
+  z-index: 10;
+  border-radius: 32px 0 0 32px;
+}
+img{
+  z-index: 10;
+  margin: 0;
+  width: 100%;
 }
 h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   margin: 0 0 16px 0;
+  width: 90%;
+  color: #4942E4;
 }
+h3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 0 16px 0;
+  width: 90%;
+  color: #8696FE;
+}
+
 .reg{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
 }
 .input{
     min-width: 190px;
-    margin-top: 20px;
+    margin-top: 14px;
 }
 
 .h1{
@@ -77,33 +121,31 @@ h2{
 }
 
 .input {
-    background-color: #ffffffd0;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    border: none;
-    padding: 8px;
-    box-shadow: 0 0 0 .15vw rgba(148, 111, 216, 0.186);
-    border-radius: 0.4vw;
-    outline: none;
-    min-width: 250px;
-    min-height: 36px;
-    transition: .6s;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-  }
+  background-color: #ffffffd0;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 0.4vw;
+  outline: none;
+  min-width: 220px;
+  min-height: 26px;
+  transition: .3s;
+  color: #AEE2FF;
+  border: 1px solid skyblue;
+  border-radius: 50px;
+}
   
-  .input:hover {
-    box-shadow: 0 0 0 .15vw rgba(37, 62, 71, 0.186);
-  }
+.input:hover {
+  box-shadow: 0 0 0 .15vw rgba(37, 62, 71, 0.186);
+}
   
-  .input:focus {
-    box-shadow: 0 0 0 .15vw skyblue;
-  }
+.input:focus {
+  box-shadow: 0 0 0 .15vw skyblue;
+}
 .input2{
-  
   margin-top: 10px;
   background-color: #0066ff;
-  color: #fff;
   border: 0;
   display: block;
   border-radius: 24px;
@@ -113,9 +155,9 @@ h2{
   font-weight: 600;
   cursor: pointer;
   transition: background-color .3s ease;
+  color: white;
 }
 .warn2{
-  
   margin-top: 10px;
   background-color: #0066ff;
   color: #fff;
