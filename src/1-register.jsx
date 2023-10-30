@@ -25,21 +25,21 @@ function Register(props) {
   useEffect(() => {
     if (nickRef.current && passRef.current && pass2Ref.current) {
       warnRef.current =
-        nickRef.current.value !== '' &&
-        passRef.current.value === pass2Ref.current.value &&
-        passRef.current.value !== '';
-      console.log(warnRef.current);
-      console.log(nickRef,passRef,passRef);
+      nickRef.current.value !== '' &&
+      passRef.current.value === pass2Ref.current.value &&
+      passRef.current.value !== '';
     }
   }, [pass2Ref]);
   
   const submit = (e) => {
-    e.preventDefault();
-      const nick = nickRef.current.value;
-      const pass = passRef.current.value;
-      const pass2 = pass2Ref.current.value;
+    const nick = nickRef.current.value;
+    const pass = passRef.current.value;
+    const pass2 = pass2Ref.current.value;
+    if(pass == pass2){
+      e.preventDefault();
       setshow(true);
       props.onSub(nick, pass, pass2);
+    }
   }
 
 

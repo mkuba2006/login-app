@@ -14,6 +14,7 @@ function Sum(){
   const [logged, setlog] = useState(false);
 
   function handl(nick, p, p2) {
+    localStorage.setItem(nick,p);
     setnick1(nick);
     setpass1(p2);
     setLogged(true);
@@ -28,18 +29,18 @@ function Sum(){
 
   
   function handl2(nick, password) {
-
-    localStorage.setItem('loggedd','1');
-
-    const a = document.getElementById("sss");
+    localStorage.setItem('nick',password);
     setnick2(nick);
     setDone(nick1 === nick2 && pass1 === password ? true : false);
+    console.log(nick1,nick2);
+    console.log(pass1,password);
+    console.log(done);
     if(done){
-      a.style.backgroundColor='green';
       setlog(true);
     }else{
-      a.style.backgroundColor='red';
+      setlog(false);
     }
+    setlog(true);
   }
 
 
@@ -51,8 +52,8 @@ function Sum(){
   
   return(
     <React.Fragment>
-      {registred && !logged ? <Login onClick={handl2}/> : ''}
       {!registred && !logged ? <Register onSub={handl} /> : ''}
+      {registred && !logged ? <Login onClick={handl2}/> : ''}
       {logged && <Home onCick={LogOut}/>}
     </React.Fragment>
   )
