@@ -29,7 +29,7 @@ function Sum(){
 
   
   function handl2(nick, password) {
-    localStorage.setItem('nick',password);
+    localStorage.setItem('loggedd','1');
     setnick2(nick);
     setDone(nick1 === nick2 && pass1 === password ? true : false);
     console.log(nick1,nick2);
