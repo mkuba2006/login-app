@@ -23,7 +23,7 @@ body{
 
 #root{
   position: relative;
-  margin: 200px auto;
+  margin: 10% auto;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -146,12 +146,25 @@ body{
   }
 
 
+  @media screen and (max-width: 1400px) {
+    #root{
+      position: relative;
+      margin: 10% auto;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border: none;
+    }
+  }
+
   @media screen and (max-width:800px){
     #cont{
       max-width: 200px;
     }
     #root{
-      margin: 30% auto;
+      margin: 0;
     }
     h2{
       font-size: 20px;
@@ -173,5 +186,15 @@ body{
     @keyframes bubble1 {
       0% { transform: translateY(50vh); }
       100% { transform: translateY(-220vh); } 
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+
+    #root{
+      margin: 0;
+      position: fixed;
+      width: 100vw;
+      bottom: 0;
     }
   }

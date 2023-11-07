@@ -32,7 +32,7 @@ body{
 
 #root{
   position: relative;
-  margin: 200px auto;
+  margin: auto;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -156,6 +156,10 @@ h3{
   cursor: pointer;
   transition: background-color .3s ease;
   color: white;
+  transition: 0.3s;
+}
+.input2:hover{
+  background-color: #0052cc;
 }
 .warn2{
   margin-top: 10px;
@@ -172,13 +176,13 @@ h3{
   transition: background-color .3s ease;
   display: block;
 }
-.warn2:hover {
+/* .warn2:hover {
   background-color: green;
 }
 
 .input2:hover {
   background-color: red;
-}
+} */
 
 .input23{
   background-color: #0066ff;
@@ -336,3 +340,263 @@ h3{
     color: black;
   }
   
+
+
+
+@media screen and (max-width: 1400px) {
+  .cont{
+    height: 70vh;
+    width: 80vw;
+    min-width: 700px;
+    max-height: 550px;
+  }
+  
+  main{
+    width: 30%;
+    min-width: 300px;
+  }
+  .img{
+    width: 70%;
+  }
+  img{
+    min-width: 300px;
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .cont{
+    height: 70vh;
+    width: 80vw;
+    min-width: 700px;
+    max-height: 550px;
+  }
+  
+  main{
+    width: 40%;
+    min-width: 300px;
+  }
+  .img{
+    padding: 32px 64px;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E4F1FF;
+    z-index: 10;
+    border-radius: 32px 0 0 32px;
+    overflow: visible;
+    max-width: 270px;
+  }
+  img{
+    min-width: 400px;
+  }
+}
+
+
+
+@media screen and (max-width: 980px) {
+  body{
+    overflow-y: scroll;
+  }
+  .cont{
+    height: auto;
+    width: 80vw;
+    flex-direction: column;
+    min-width: 700px;
+    max-height: 1200px;
+  }
+  
+  main{
+    padding: 64px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: white;
+    border-radius: 45% 45% 0 0;
+    width: 100%;
+    z-index: 10;
+    color: black;
+  }
+  .reg{
+    margin: 0 auto;
+  }
+  h2 , h3{
+    margin: 0 auto;
+  }
+  .img{
+    padding: 32px 64px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E4F1FF;
+    z-index: 10;
+    border-radius: 32px 0 0 32px;
+    overflow: visible;
+    margin: 0 auto;
+    max-width: 200px;
+    max-height: 300px;
+  }
+  img{
+    min-width: 400px;
+  }
+}
+
+
+
+@media screen and (max-width: 800px) {
+  body{
+    background: url('./images/circle-scatter-haikei.svg');
+    background-position: center;
+  }
+  #root{
+    margin: 0;
+  }
+  .cont{
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    min-width: none;
+    max-height: none;
+    background: none;
+    box-shadow: none;
+  }
+  main{
+    margin: 0;
+    transform: translateY(-1px);
+    padding: 10px 0 70px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: none;
+    border-radius: 0;
+    width: 100vw;
+    z-index: 10;
+    color: black;
+    min-width: 1px;
+    margin: 0 auto;
+    height: 50vh;
+  }
+  .reg{
+    margin: 0 auto;
+  }
+  h2 , h3{
+    margin: 0 auto;
+  }
+  h3{
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 60px;
+  }
+  h3::after{
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    background-color: #00ff95;
+    color: #040f16;
+    content: '';
+    margin-top: 35px;
+  }
+  .img{
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    border-radius: 32px 0 0 32px;
+    overflow: visible;
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: none;
+    min-height: 300px;
+    max-height: 300px;
+    background: none;
+  }
+  img{
+    min-width: 0px;
+    max-width: 0px;
+  }
+}
+
+
+
+@media screen and (max-width: 550px) {
+  main{
+    margin: 0;
+    transform: translateY(-1px);
+    padding: 10px 0 70px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0;
+    width: 100vw;
+    z-index: 10;
+    color: black;
+    min-width: 1px;
+    margin: 0 auto;
+    height: 50vh;
+  }
+  h2{
+    font-size: 30px;
+  }
+  h3{
+    font-size: 20px;
+  }
+  .img{
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    border-radius: 32px 0 0 32px;
+    overflow: visible;
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: none;
+    min-height: 300px;
+    max-height: 300px;
+    background: url('./images/wave-haikei.svg');
+  }
+  .input {
+    background-color: #ffffffd0;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    padding: 8px 20px;
+    border-radius: 0.4vw;
+    outline: none;
+    height: 32px;
+    min-width: 240px;
+    min-height: 26px;
+    transition: .3s;
+    color: #AEE2FF;
+    border: 1px solid skyblue;
+    border-radius: 50px;
+  }
+  .input2{
+    margin-top: 10px;
+    background-color: #0066ff;
+    border: 0;
+    display: block;
+    border-radius: 24px;
+    min-width: 280px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    color: white;
+  }
+  body{
+    background: url('./images/ha7.svg');
+  }
+}
