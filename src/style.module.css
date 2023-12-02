@@ -335,11 +335,15 @@ h3{
     top: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 80px 50px;
+    width: 200px;
+    height: 200px;
+    padding: 30px 30px;
     border-radius: 7px;
     color: black;
   }
-  
+  .passed2 img{
+    width: 150px;
+  }
 
 
 
