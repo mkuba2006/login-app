@@ -451,8 +451,7 @@ h3{
 
 @media screen and (max-width: 800px) {
   body{
-    background: url('./images/circle-scatter-haikei.svg');
-    background-position: center;
+    background: #040f16;
   }
   #root{
     margin: 0;
@@ -467,21 +466,16 @@ h3{
     box-shadow: none;
   }
   main{
-    margin: 0;
-    transform: translateY(-1px);
-    padding: 10px 0 70px 0;
+    padding: 64px 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background: none;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: white;
     border-radius: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 10;
     color: black;
-    min-width: 1px;
-    margin: 0 auto;
-    height: 50vh;
   }
   .reg{
     margin: 0 auto;
@@ -512,14 +506,14 @@ h3{
     justify-content: center;
     align-items: center;
     z-index: 10;
-    border-radius: 32px 0 0 32px;
+    border-radius: 0;
     overflow: visible;
     margin: 0 auto;
     min-width: 300px;
     max-width: none;
-    min-height: 300px;
-    max-height: 300px;
+    height: 600px;
     background: none;
+    background: url('./images/wave-haikei\ \(14\).svg');
   }
   img{
     min-width: 0px;
@@ -529,7 +523,7 @@ h3{
 
 
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 580px) {
   main{
     margin: 0;
     transform: translateY(-1px);
