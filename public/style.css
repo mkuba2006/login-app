@@ -162,7 +162,6 @@ body{
 
     #root{
       margin: 0;
-      position: fixed;
       width: 100vw;
       bottom: 0;
     }
