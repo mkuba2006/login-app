@@ -20,7 +20,9 @@ html, body {
 }
 body{
   background: url('./images/haikei2.svg');
-  background-position: center;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: rgb(37, 38, 39);
   font-family: 'Montserrat', sans-serif;
   margin: 0;
